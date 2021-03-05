@@ -20,11 +20,11 @@ class BallAnimation {
         ),
         ballHeight = Tween<double>(begin: 100, end: 85).animate(CurvedAnimation(
           parent: controller,
-          curve: Interval(0.900, 1.000, curve: Curves.easeIn),
+          curve: Interval(0.925, 1.000, curve: Curves.easeIn),
         )),
         ballWidth = Tween<double>(begin: 100, end: 115).animate(CurvedAnimation(
           parent: controller,
-          curve: Interval(0.900, 1.000, curve: Curves.easeIn),
+          curve: Interval(0.925, 1.000, curve: Curves.easeIn),
         )),
         ballShadow = Tween<double>(begin: 0, end: 1).animate(
           CurvedAnimation(
