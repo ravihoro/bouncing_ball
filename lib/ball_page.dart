@@ -20,14 +20,26 @@ class BallPage extends StatelessWidget {
       child: Transform(
         transform: Matrix4.translationValues(
             0.0, animation.ballYTranslation.value, 0.0),
-        child: Container(
-          height: animation.ballHeight.value,
-          width: animation.ballWidth.value,
-          decoration: BoxDecoration(
-            border: Border.all(width: 1.5, color: Colors.black),
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(50),
-          ),
+        child: Column(
+          children: [
+            Container(
+              height: animation.ballHeight.value,
+              width: animation.ballWidth.value,
+              decoration: BoxDecoration(
+                border: Border.all(width: 1.5, color: Colors.black),
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(50),
+              ),
+            ),
+            SizedBox(
+              height: 100 - animation.ballYTranslation.value,
+            ),
+            Container(
+              width: animation.ballShadow.value * 100,
+              height: animation.ballShadow.value * 1.5,
+              color: Colors.grey,
+            ),
+          ],
         ),
       ),
     );
